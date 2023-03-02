@@ -15,6 +15,7 @@ const ContactForm = ({addContact}) => {
         addContact({
             key: getNewID(),
             ...values,
+            createdAt: new Date().getTime(),
         });
         form.resetFields();
     };

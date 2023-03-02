@@ -34,7 +34,10 @@ const App = () => {
             key: '2',
             icon: <TableOutlined />,
             label: 'List of Contacts',
-            onClick: () =>  {setAlert(false); setContent(<ContactList list={list} />)}
+            onClick: () =>  {
+                setAlert(false);
+                setContent(<ContactList list={list} setList={setList} />)
+            }
         },
     ];
 
